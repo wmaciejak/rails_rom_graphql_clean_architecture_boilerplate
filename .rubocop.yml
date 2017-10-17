@@ -1,0 +1,123 @@
+require: rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 2.4
+  DisplayCopNames: true
+  Exclude:
+    - 'config.ru'
+    - 'Rakefile'
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'bin/*'
+    - 'script/*'
+    - 'vendor/**/*'
+    - 'lib/tasks/**/*'
+
+Rails:
+  Enabled: true
+
+Documentation:
+  Exclude:
+    - 'app/controllers/**/*.rb'
+    - 'app/helpers/**/*.rb'
+    - 'app/mailers/**/*.rb'
+
+
+Style/BarePercentLiterals:
+  EnforcedStyle: percent_q
+
+Layout/EmptyLineBetweenDefs:
+  AllowAdjacentOneLineDefs: true
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes
+
+Style/BracesAroundHashParameters:
+  EnforcedStyle: context_dependent
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/DoubleNegation:
+  Enabled: false
+
+Style/SingleLineBlockParams:
+  Enabled: false
+
+Style/ParallelAssignment:
+  Enabled: false
+
+Style/Lambda:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 15
+
+#not appliable for rails<5
+Rails/HttpPositionalArguments:
+  Enabled: false
+
+#not appliable for ruby<2.4
+Lint/UnifiedInteger:
+  Enabled: false
+
+Rails/SkipsModelValidations:
+  Enabled: false
+
+Style/SafeNavigation:
+  Enabled: false
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 100
+
+Metrics/ClassLength:
+  Max: 150
+
+Metrics/ModuleLength:
+  Max: 150
+
+Lint/EndAlignment:
+  EnforcedStyleAlignWith: variable
+
+Lint/AssignmentInCondition:
+  Enabled: false
+
+Lint/AmbiguousRegexpLiteral:
+  Exclude:
+    - 'features/step_definitions/**/*.rb'
+Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+  - spec/**/*.rb
+
+RSpec/NestedGroups:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Max: 10
+
+Style/WordArray:
+  Enabled: false
+
+RSpec/NamedSubject:
+  Enabled: false
+
+RSpec/AnyInstance:
+  Enabled: false
+
+RSpec/MessageSpies:
+  Enabled: false

@@ -1,0 +1,3 @@
+enable_defaults! { ENV["RAILS_ENV"] != "production" }
+
+variable :DATABASE_URL, :string, default: "postgresql://#{`whoami`.strip}@localhost:5432/example_project_#{Rails.env}"
