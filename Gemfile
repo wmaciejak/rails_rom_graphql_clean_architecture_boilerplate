@@ -6,9 +6,9 @@ ruby "2.4.2"
 
 gem "rails", "5.1.4"
 
-gem "rom", "4.0.0.rc2"
+gem "rom", "4.0.0"
 gem "rom-rails", "1.0.0.rc1"
-gem "rom-sql", "2.0.0.rc1"
+gem "rom-sql", "2.0.0"
 
 gem "pg", "0.21.0"
 gem "sequel", "5.1.0"
