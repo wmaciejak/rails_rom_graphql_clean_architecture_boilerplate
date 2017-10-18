@@ -2,6 +2,8 @@
 
 source "https://rubygems.org"
 
+ruby "2.4.2"
+
 gem "rails", "5.1.4"
 
 gem "rom", "4.0.0.rc2"
@@ -26,7 +28,7 @@ group :development, :test do
   gem "bundler-audit", "0.6.0"
   gem "rubocop", "0.50.0"
   gem "rubocop-rspec", "1.18.0"
-  
+
   # Required by working graphiql
   gem "coffee-rails", "4.2.2"
   gem "sass-rails", "5.0.6"
