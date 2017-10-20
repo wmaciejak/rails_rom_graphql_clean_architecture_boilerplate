@@ -6,4 +6,8 @@ class UserRepo < ROM::Repository[:users]
   def one(id)
     users.where(id: id).one
   end
+
+  def all_for_ids(ids)
+    users.where(id: ids).to_a
+  end
 end

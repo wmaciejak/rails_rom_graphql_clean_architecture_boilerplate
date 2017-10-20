@@ -33,7 +33,7 @@ This is a sample app which shows how Rails 5, ROM 4.0, GraphQL and Clean Archite
 
 ## Known issues
 
-- [ ] camelCase in queries(thx [RadoMark](https://github.com/RadoMark/))
+- [x] camelCase in queries(thx [RadoMark](https://github.com/RadoMark/))[fix](https://github.com/wmaciejak/rails_rom_graphql_clean_architecture_boilerplate/commit/e0d0c7fe10f31f37ef3d997a2c056b84f29bf6ed)
 
 ## Links
 
