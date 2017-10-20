@@ -4,18 +4,16 @@ UserType = GraphQL::ObjectType.define do
   name "User"
   field :email, types.String
   field :username, types.String
-  field :posts, PostType, resolve: ->(user, _, _) do
+  field :posts, types[PostType], resolve: ->(user, _, _) do
     BatchLoader.for(user.id).batch do |user_ids, loader|
-      PostRepo.new(ROM.env).all_for_user(user_ids).each do |post|
-        loader.call(post.user_id, post)
-      end
+      grouped_hash = PostRepo.new(ROM.env).all_for_user(user_ids).group_by(&:user_id)
+      user_ids.each { |user_id| loader.call(user_id, grouped_hash[user_id]) }
     end
   end
-  field :comments, CommentType, resolve: ->(user, _, _) do
-    BatchLoader.for(user.id).batch do |user_ids, loader|
-      CommentRepo.new(ROM.env).all_for_author(user_ids).each do |comment|
-        loader.call(comment.author_id, comment)
-      end
+  field :comments, types[CommentType], resolve: ->(user, _, _) do
+    BatchLoader.for(user.id).batch do |author_ids, loader|
+      grouped_hash = CommentRepo.new(ROM.env).all_for_author(author_ids).group_by(&:author_id)
+      author_ids.each { |author_id| loader.call(author_id, grouped_hash[author_id]) }
     end
   end
 end

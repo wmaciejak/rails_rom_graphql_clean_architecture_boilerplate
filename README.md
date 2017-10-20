@@ -18,6 +18,7 @@ This is a sample app which shows how Rails 5, ROM 4.0, GraphQL and Clean Archite
 - [x] modularization of fields in QueryType [app/graphql/query_type.rb](https://github.com/wmaciejak/rails_rom_graphql_clean_architecture_boilerplate/blob/master/app/graphql/query_type.rb#L6)
 - [x] Implementation of Clean Architecture
 - [x] Separation of seeds by the environment [db/seeds.rb](https://github.com/wmaciejak/rails_rom_graphql_clean_architecture_boilerplate/blob/master/db/seeds.rb)
+- [x] Loading relations one-to-many without N+1, fixed by naive implementation - [BatchLoader issue#5](https://github.com/exAspArk/batch-loader/issues/5)
 
 ## What's to be done
 
@@ -32,7 +33,6 @@ This is a sample app which shows how Rails 5, ROM 4.0, GraphQL and Clean Archite
 
 ## Known issues
 
-- [ ] [BatchLoader issue#5](https://github.com/exAspArk/batch-loader/issues/5) - Partly fixed by custom solution but it's still `in progress`
 - [ ] camelCase in queries(thx [RadoMark](https://github.com/RadoMark/))
 
 ## Links
