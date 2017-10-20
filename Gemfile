@@ -10,6 +10,8 @@ gem "rom", "4.0.0"
 gem "rom-rails", "1.0.0.rc1"
 gem "rom-sql", "2.0.0"
 
+gem "dry-container", "0.6.0"
+
 gem "pg", "0.21.0"
 gem "sequel", "5.1.0"
 

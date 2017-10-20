@@ -6,12 +6,12 @@ module QueryTypes
       type PostType
       argument :id, !types.ID
       description "Find a Post by ID"
-      resolve ->(_obj, args, _ctx) { PostRepo.new(ROM.env).one(args["id"]) }
+      resolve ->(_obj, args, _ctx) { Container.instance["repositories.post"].one(args["id"]) }
     end
 
     field :posts do
       type !types[PostType]
-      resolve ->(_obj, _args, _ctx) { PostRepo.new(ROM.env).to_a }
+      resolve ->(_obj, _args, _ctx) { Container.instance["repositories.post"].to_a }
     end
   end
 end

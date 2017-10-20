@@ -273,6 +273,7 @@ DEPENDENCIES
   bundler-audit (= 0.6.0)
   coffee-rails (= 4.2.2)
   database_cleaner (= 1.6.1)
+  dry-container (= 0.6.0)
   envied (= 0.9.1)
   graphiql-rails (= 1.4.5)
   graphql (= 1.7.4)

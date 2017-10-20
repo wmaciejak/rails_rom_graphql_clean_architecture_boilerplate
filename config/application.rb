@@ -18,6 +18,7 @@ ENVied.require(*ENV['ENVIED_GROUPS'] || Rails.groups)
 module ExampleProject
   class Application < Rails::Application
     config.enable_dependency_loading = true
+    config.autoload_paths << Rails.root.join('lib')
     config.autoload_paths << Rails.root.join('app/graphql')
     config.autoload_paths << Rails.root.join('app/graphql/types')
     config.api_only = true
