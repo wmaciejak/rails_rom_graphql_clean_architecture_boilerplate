@@ -1,6 +1,15 @@
 # frozen_string_literal: true
+def connection_params
+  uri = URI.parse(ENVied.DATABASE_URL)
+  {
+    user: uri.user,
+    password: uri.password,
+    host: uri.host,
+    port: uri.port,
+  }
+end
 
-DB = Sequel.connect(ENVied.DATABASE_URL)
+DB = Sequel.postgres("template1", connection_params)
 
 def create_db(name)
   DB.run "CREATE DATABASE #{name}"
