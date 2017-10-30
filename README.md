@@ -19,11 +19,11 @@ This is a sample app which shows how Rails 5, ROM 4.0, GraphQL and Clean Archite
 - [x] Implementation of Clean Architecture
 - [x] Separation of seeds by the environment [db/seeds.rb](https://github.com/wmaciejak/rails_rom_graphql_clean_architecture_boilerplate/blob/master/db/seeds.rb)
 - [x] Loading relations one-to-many without N+1, fixed by naive implementation - [BatchLoader issue#5](https://github.com/exAspArk/batch-loader/issues/5)
+- [x] Modularization project "per feature"
+- [x] Global container([dry-container](http://dry-rb.org/gems/dry-container/)) for better using repositories
 
 ## What's to be done
 
-- [ ] Modularization project "per feature"
-- [ ] Global container for better using repositories
 - [ ] Abstraction on BatchLoader(more DRY implementation)
 - [ ] Sample use case
 - [ ] Mutations
