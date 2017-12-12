@@ -15,6 +15,7 @@ This is a sample app which shows how Rails 5, ROM 4.0, GraphQL and Clean Archite
 
 ### By own implementation - feedback is appreciated!
 
+- [x] Abstraction on BatchLoader(more DRY implementation)[[refactor] Abstraction in resolvers | 6930a13](https://github.com/wmaciejak/rails_rom_graphql_clean_architecture_boilerplate/pull/2/commits/6930a13758bd4aa250c3cd70b4bc9b081cc78d89)
 - [x] modularization of fields in QueryType [app/graphql/query_type.rb](https://github.com/wmaciejak/rails_rom_graphql_clean_architecture_boilerplate/blob/master/app/graphql/query_type.rb#L6)
 - [x] Implementation of Clean Architecture
 - [x] Separation of seeds by the environment [db/seeds.rb](https://github.com/wmaciejak/rails_rom_graphql_clean_architecture_boilerplate/blob/master/db/seeds.rb)
@@ -24,7 +25,6 @@ This is a sample app which shows how Rails 5, ROM 4.0, GraphQL and Clean Archite
 
 ## What's to be done
 
-- [ ] Abstraction on BatchLoader(more DRY implementation)
 - [ ] Sample use case
 - [ ] Mutations
 - [ ] Tests

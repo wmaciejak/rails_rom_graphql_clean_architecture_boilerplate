@@ -6,14 +6,6 @@ CommentType = GraphQL::ObjectType.define do
   field :content, !types.String
   field :created_at, !types.String
   field :updated_at, !types.String
-  field :author, UserType, resolve: ->(comment, _, _) do
-    BatchLoader.for(comment.author_id).batch do |author_ids, loader|
-      Container.instance["repositories.user"].all_for_ids(author_ids).each { |user| loader.call(user.id, user) }
-    end
-  end
-  field :post, PostType, resolve: ->(comment, _, _) do
-    BatchLoader.for(comment.post_id).batch do |post_ids, loader|
-      Container.instance["repositories.post"].all_for_ids(post_ids).each { |post| loader.call(post.id, post) }
-    end
-  end
+  field :author, UserType, resolve: Comment::Resolvers::Authors.new
+  field :post, PostType, resolve: Comment::Resolvers::Posts.new
 end
