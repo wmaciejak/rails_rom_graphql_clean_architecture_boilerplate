@@ -1,0 +1,19 @@
+query {
+  users {
+    username
+    email
+    posts {
+      id
+      content
+      title
+      created_at
+      updated_at
+      comments {
+        id
+        content
+        created_at
+        updated_at
+      }
+    }
+  }
+}

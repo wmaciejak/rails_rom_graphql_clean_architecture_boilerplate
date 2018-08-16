@@ -22,12 +22,13 @@ This is a sample app which shows how Rails 5, ROM 4.0, GraphQL and Clean Archite
 - [x] Loading relations one-to-many without N+1, fixed by naive implementation - [BatchLoader issue#5](https://github.com/exAspArk/batch-loader/issues/5)
 - [x] Modularization project "per feature"([app/concepts/*](https://github.com/wmaciejak/rails_rom_graphql_clean_architecture_boilerplate/commit/9d95c1f6831557c466996196b6d671937c8049bd))
 - [x] Global container([dry-container](http://dry-rb.org/gems/dry-container/)) with [auto-registration repositories](https://github.com/wmaciejak/rails_rom_graphql_clean_architecture_boilerplate/commit/6cb7b909590f47b6a4c19e8a454080290eb5243b)
+- [x] Integration tests([spec/integrations/*])
 
 ## What's to be done
 
 - [ ] Sample use case
 - [ ] Mutations
-- [ ] Tests
+- [ ] Unit tests
 - [ ] Sample pagination
 - [ ] Translation from queries Abstract Syntax Tree to Ruby Object Mapper API - the best solution is adapter, but it's a future voice
 
@@ -57,8 +58,6 @@ query {
         content
         created_at
         updated_at
-        author_id
-        post_id
       }
     }
     comments {
@@ -66,8 +65,6 @@ query {
         content
         created_at
         updated_at
-        author_id
-        post_id
     }
   }
 }
