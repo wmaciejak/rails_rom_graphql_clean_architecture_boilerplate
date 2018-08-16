@@ -5,9 +5,9 @@ QueryType = GraphQL::ObjectType.new.tap do |root|
   root.description = "The query root of this schema"
   root.fields = Utils::CombineFields.call(
     [
-      QueryTypes::User,
-      QueryTypes::Post,
-      QueryTypes::Comment,
+      User::Graphql::QueryType,
+      Post::Graphql::QueryType,
+      Comment::Graphql::QueryType,
     ],
   )
 end
