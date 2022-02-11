@@ -20,7 +20,7 @@ gem "graphiql-rails", "1.4.5"
 gem "graphql", "1.7.4"
 
 gem "envied", "0.9.1"
-gem "puma", "3.10.0"
+gem "puma", "4.3.11"
 
 group :development, :test do
   gem "pry-rails", "0.3.6"
